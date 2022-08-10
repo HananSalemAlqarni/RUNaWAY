@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t hanansalem88/RunWay:latest .'
+				sh 'docker build -t hanansalem88/runway-jenkies:latest .'
 			}
 		}
 
@@ -25,7 +25,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push hanansalem88/RunWay:latest'
+				sh 'docker push hanansalem88/runway-jenkies:latest'
 			}
 		}
 	}

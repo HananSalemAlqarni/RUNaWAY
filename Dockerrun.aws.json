@@ -1,7 +1,7 @@
 {
     "AWSEBDockerrunVersion": "1",
     "Image": {
-      "Name": "registry.hub.docker.com/hanansalem88/RunWay:latest"
+      "Name": "registry.hub.docker.com/hanansalem88/runway-jenkies:latest"
     },
     "Ports": [
       {
