@@ -4,8 +4,8 @@ pipeline {
 
 	environment {
 		DOCKERHUB_CREDENTIALS=credentials('hanansalem88-dockerhub')
-		AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
-        AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
+		AWS_ACCESS_KEY_ID     = credentials('Hanan-aws-secret-key-id')
+        AWS_SECRET_ACCESS_KEY = credentials('Hanan-aws-secret-access-key')
 		ARTIFACT_NAME = 'Dockerrun.aws.json'
 		AWS_S3_BUCKET = 'hanan-belt2d2-artifacts-123456'
 		AWS_EB_APP_NAME = 'exam-run'
