@@ -4,12 +4,12 @@ pipeline {
 
 	environment {
 		DOCKERHUB_CREDENTIALS=credentials('hanansalem88-dockerhub')
-		AWS_ACCESS_KEY_ID     = credentials('Hanan-aws-secret-key-id')
-        AWS_SECRET_ACCESS_KEY = credentials('Hanan-aws-secret-access-key')
+		AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
+        AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
 		ARTIFACT_NAME = 'Dockerrun.aws.json'
 		AWS_S3_BUCKET = 'hanan-belt2d2-artifacts-123456'
-		AWS_EB_APP_NAME = 'exam-run'
-        AWS_EB_ENVIRONMENT_NAME = 'Examrun-env '
+		AWS_EB_APP_NAME = 'exam-runway-u'
+        AWS_EB_ENVIRONMENT_NAME = 'Examrunwayu-env'
         AWS_EB_APP_VERSION = "${BUILD_ID}"
 	}
 
@@ -18,7 +18,7 @@ pipeline {
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t hanansalem88/runway-jenkies .'
+				sh 'docker build -t hanansalem88/runway:latest .'
 			}
 		}
 
@@ -32,7 +32,7 @@ pipeline {
 		stage('Push') {
 
 			steps {
-				sh 'docker push hanansalem88/runway-jenkies:latest'
+				sh 'docker push hanansalem88/runway:latest'
 			}
 		}
 
